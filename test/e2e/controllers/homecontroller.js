@@ -5,16 +5,23 @@ describe('E2E: angularjs homepage statustext', function() {
   });
   
   it('should display a status text', function() {
-    expect(element(by.tagName('p')).getText())
-    .toEqual('Lorem ipsum dolor mit');
+
+    var p = element(by.tagName("p"));
+    var pText = p.getText();
+
+    expect(pText).toBe('Lorem ipsum dolor mit');
   });
 
   it('should display a different status text after button click', function() {
+
     element(by.tagName('button')).click();
+
+
     expect(element(by.tagName('p')).getText()).toEqual('Done!');
   });
 
-  it('should display an alert when the form is submitted', function() {
+  it('should display a hellow message when the form is submitted', function() {
+    
     element(by.model('name')).sendKeys("Dominic");
 
     element(by.css('button#form-submit')).click();

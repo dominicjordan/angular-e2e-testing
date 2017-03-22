@@ -2,7 +2,7 @@ var studentenAppFilters = angular.module('studentenApp.filters', []);
 
 var studentenApp = angular.module('studentenApp', ['ngRoute', 'studentenApp.filters']);
 
-studentenApp.config(function($routeProvider, $locationProvider) {
+studentenApp.config(function($routeProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'views/home.html',
@@ -13,6 +13,4 @@ studentenApp.config(function($routeProvider, $locationProvider) {
             controller: 'AboutController'
         })
         .otherwise({ redirectTo: '/' });
-
-    //$locationProvider.html5Mode(true);
 });

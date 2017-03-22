@@ -5,7 +5,10 @@ describe('E2E: AboutController', function() {
     });
     
     it('should display a proper h1 message', function() {
-        expect(element(by.tagName('h1')).getText()).toBe("About page");
+
+        var h1 = element(by.tagName('h1'));
+        var h1Text = h1.getText();
+        expect(h1Text).toBe("About page");
     });
 
 });
