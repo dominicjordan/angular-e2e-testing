@@ -1,0 +1,16 @@
+<h1>HOME</h1>
+<p class="status">{{statusText}}</p>
+
+<button ng-click="run()">CLICK ME</button>
+
+
+<form ng-submit="submit()">
+    <input type="text" ng-model="name" />
+    <button id="form-submit" type="submit">Say hi!</button>
+</form>
+
+<span ng-show="message.length>0">{{message}}</span>
+
+<ul>
+    <li ng-repeat="item in items">{{item.name}}</li>
+</ul>

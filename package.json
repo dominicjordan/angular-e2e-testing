@@ -1,0 +1,14 @@
+{
+  "name": "angular-e2e-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "test": "karma start test/karma.conf.js",
+    "postinstall": "bower install",
+    "start": "http-server . -a localhost -p 8080 -c-1"
+  },
+  "author": "",
+  "license": "ISC"
+}
